@@ -1,0 +1,75 @@
+@import './mixins';
+@import './variables';
+
+.header{
+    color: $primary-light-grey;
+    @include Flex(row);
+    margin-bottom: 4em;
+    justify-content: flex-end;
+    position: relative;
+    &__mobile-icon{
+        color: $primary-orange;
+        padding: 0.75em;
+        margin: 0.5em 0.5em 0 0;
+        z-index: 10;
+        transition: 350ms transform cubic-bezier(0.3,-0.37, 0.82, 1.38);
+        position: fixed;
+        @include Flex-Center(row);
+        &:hover,
+        &:focus{
+            cursor: pointer;
+        }
+        &:not(.menu-icon-rotate){
+            &:hover,
+            &:focus{
+                transform: scale(1.15);
+            }
+        }
+    }
+    &__menu-container{
+        z-index: 9;
+        position: fixed;
+        background: $primary-dark-blue;
+        width: 0;
+        height: 100vh;
+        text-align: center;
+        @include Flex-Center(column);
+        transition: 350ms width cubic-bezier(0.22, 0.61, 0.4, 0.93);
+        overflow: hidden;
+        &__options{
+            padding: 1em 0;
+            font-size: 2rem;
+            font-weight: 600;
+            opacity: 0;
+           &:hover{
+               color: $primary-orange;
+                box-shadow: 0px -1.15em 0.5em -0.75em inset $primary-orange;
+           }
+        }
+    }
+}
+
+.menu-open{
+    width: 100vw;
+}
+
+.menu-icon-rotate{
+    transform: rotate(0.5turn);
+}
+
+.Opacity{
+    opacity: 1;
+}
+
+.Opacity.header__menu-container__hm{
+    transition: box-shadow 350ms ease 0ms, opacity 350ms ease 50ms
+}
+.Opacity.header__menu-container__pf{
+    transition: box-shadow 350ms ease 0ms, opacity 350ms ease 100ms
+}
+.Opacity.header__menu-container__pj{
+    transition: box-shadow 350ms ease 0ms, opacity 350ms ease 150ms
+}
+.Opacity.header__menu-container__rm{
+    transition: box-shadow 350ms ease 0ms, opacity 350ms ease 200ms
+}

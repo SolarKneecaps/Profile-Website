@@ -1,0 +1,7 @@
+
+body{
+    @include Flex(column);
+    background: $primary-dark-blue;
+    min-width: 400px;
+    overflow-x: hidden;
+}

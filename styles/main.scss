@@ -1,0 +1,68 @@
+@import './mixins';
+@import './variables';
+@import './resets';
+
+@import './body-home';
+@import './header';
+@import './footer';
+
+
+.main{
+    @include Flex-Center(column);
+    &__title{
+        font-family: 'Merriweather Sans', sans-serif;
+        color: $primary-white;
+        text-shadow: -1px 1px 0 #000,
+                     1px 1px 0 #000,
+                     1px -1px 0 #000,
+                     -1px -1px 0 #000;
+        font-size: 4rem;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+    &__card-container{
+        width: 75%;
+        max-width: 65ch;
+        height: 6em;
+        margin: 0 auto;
+        position: relative;
+        transition: transform 2000ms ease-out;
+        transform-style: preserve-3d;
+        margin-bottom: 1em;
+        &__front,
+        &__back{
+            position: absolute;
+            text-align: center;
+            vertical-align: center;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            background: rgba($primary-dark-blue, 0.95);
+            border: 3px solid $primary-orange;
+            color: $primary-light-grey;
+            font-size: 1.6rem;
+            font-weight: 600;
+            @include Flex-Center(row);
+            p{
+                transform: translateZ(75px);
+            }
+        }
+        &__back{
+            transform: rotateY(0.5turn);
+        }
+    }
+}
+
+
+a:visited,
+a:active{
+    text-decoration: none;
+}
+
+.header-less{
+    height: 30%;
+    &:hover{
+        transform: none;
+    }
+}

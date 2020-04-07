@@ -1,0 +1,67 @@
+@import './mixins';
+@import './variables';
+@import './resets';
+
+@import './body-misc';
+@import './header';
+@import './footer';
+
+
+.main{
+    color: $primary-light-grey;
+    @include Flex-Center(column);
+    background: $primary-dark-blue;
+    &__container-profile{
+        width: 95%;
+        max-width: 80ch;
+        margin-bottom: 4em;
+        background: $primary-dark-grey;
+        border-radius: 100vh 200px 200px 100vh;
+        @include Flex-Center(row);
+        justify-content: flex-start;
+        
+        &__picture{
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            padding: 0.25em; 
+            object-fit: cover;
+        }
+        &__text{
+            margin-left: 1em;
+            font-size: 3rem;
+        }
+    }
+   &__container{
+       width: 95%;
+       max-width: 80ch;
+       text-align: center;
+       margin-bottom: 0.5em;
+       padding: 0em 1em;
+       background: $primary-dark-blue;
+    &__title{
+        font-size: 2rem;
+        margin-bottom: 1em;
+    }
+    &__content{
+        @include Flex-Center(row);
+        justify-content: flex-start;
+        margin-bottom: 2em;
+        background: $primary-dark-grey;
+        border-radius: 100vh 200px 200px 100vh;
+        text-align: center;
+        &__picture{
+                width: 175px;
+                height: 175px;
+                border-radius: 50%;
+                margin: 0.25em;
+                object-fit: cover;
+        }
+        &__text{
+            font-size: 1rem;
+            margin: 0.25em;
+        }
+    }
+   }
+}
+

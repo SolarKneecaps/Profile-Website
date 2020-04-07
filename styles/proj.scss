@@ -1,0 +1,109 @@
+@import './mixins';
+@import './variables';
+@import './resets';
+
+@import './body-misc';
+@import './header';
+@import './footer';
+
+
+.main{
+    @include Flex-Center(column);
+    &__title{
+        color: $primary-light-grey;
+        font-size: 3rem;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+}
+
+.cards{
+    width: 95%;
+    max-width: 80ch;
+    margin: 0 auto;
+    &__container{
+        height: 400px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        margin-bottom: 2em;
+        background: $primary-orange;
+        transition: 250ms background ease-in;
+        &__header{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 400px;
+            width: 100%;
+            padding: 0.5em 0.25em 0em 0.25em;
+            text-align: center;
+            color: white;
+            transition: 250ms height 100ms ease-in, 100ms transform 0ms ease-in;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            &:hover,
+            &:focus{
+                transform: scale(0.98);
+                cursor: pointer;
+            }
+            &:active{
+                transform: scale(0.97);
+            }
+            &__title{
+                font-size: 1.6rem;
+                margin-bottom: 0.1em;
+            }
+            &-ig{
+                background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../imgs/igpix.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &-sp2{
+                background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../imgs/spotpix.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &-cd{
+                background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../imgs/cardpix.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &-pk{
+                background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../imgs/pokpix.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            
+        }
+        &__content{
+            height: 300px;
+            @include Flex(column);
+            justify-content: flex-end;
+            padding: 0.75em;
+            &__text{
+                margin-top: auto;
+                text-align: justify;
+
+            }
+        }
+    }
+   
+}
+
+.header-less{
+    height: 75px;
+    background: $primary-blue;
+    &:hover,
+    &:focus,
+    &:active{
+        transform: none;
+    }
+}
+
+.container-header-less{
+    background: $primary-light-grey;
+}
