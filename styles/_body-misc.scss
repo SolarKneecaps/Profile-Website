@@ -2,6 +2,6 @@
 body{
     @include Flex(column);
     background: $primary-dark-blue;
-    min-width: 400px;
+    min-width: 325px;
     overflow-x: hidden;
 }
