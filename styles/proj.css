@@ -21,7 +21,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #010212;
-  min-width: 400px;
+  min-width: 320px;
   overflow-x: hidden;
 }
 
@@ -189,11 +189,11 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-bottom: 0.5em;
+  margin: 0em -0.25em 0.5em -0.25em;
 }
 
 .footer__social-container__ln, .footer__social-container__fb, .footer__social-container__gh, .footer__social-container__rs {
-  margin: 0 1em;
+  margin: 0 0.5em;
   -webkit-transition: 150ms color ease-in;
   transition: 150ms color ease-in;
 }
@@ -356,5 +356,19 @@ body {
 
 .container-header-less {
   background: #c6ccd8;
+}
+
+@media (max-width: 650px) {
+  .cards__container {
+    background: #c6ccd8;
+  }
+  .cards__container__header {
+    height: 75px;
+    background: #294280;
+  }
+  .cards__container__header:hover, .cards__container__header:focus, .cards__container__header:active {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 /*# sourceMappingURL=proj.css.map */

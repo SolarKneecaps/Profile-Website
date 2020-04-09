@@ -12,27 +12,27 @@
     @include Flex-Center(column);
     background: $primary-dark-blue;
     &__container-profile{
-        width: 95%;
+        width: 90%;
         max-width: 80ch;
         margin-bottom: 4em;
         background: $primary-dark-grey;
-        border-radius: 100vh 200px 200px 100vh;
+        border-radius: 20px;
         @include Flex-Center(column);
         justify-content: flex-start;
+        padding: 0em 0.5em;
         &__picture{
             width: 175px;
             height: 175px;
             border-radius: 50%;
-            padding: 0.25em; 
+            padding: 0.25em 0em; 
             object-fit: cover;
         }
         &__text{
-            margin-left: 1em;
             font-size: 3rem;
         }
     }
    &__container{
-       width: 95%;
+       width: 90%;
        max-width: 80ch;
        text-align: center;
        margin-bottom: 0.5em;
@@ -43,24 +43,55 @@
         margin-bottom: 1em;
     }
     &__content{
-        @include Flex-Center(row);
+        @include Flex-Center(column);
         justify-content: flex-start;
         margin-bottom: 2em;
         background: $primary-dark-grey;
-        border-radius: 100vh 200px 200px 100vh;
+        border-radius: 20px;
         text-align: center;
         &__picture{
                 width: 175px;
                 height: 175px;
                 border-radius: 50%;
-                margin: 0.25em;
+                margin: 0.25em 0em;
                 object-fit: cover;
         }
         &__text{
             font-size: 1rem;
-            margin: 0.25em;
+            margin-bottom: 0.75em;
+            padding: 0em 0.5em;
+            text-align: justify;
         }
     }
    }
 }
+
+@media(min-width: 650px){
+    .main{
+        &__container-profile,
+        &__container__content{
+            flex-direction: row;
+            border-radius: 100vh 200px 200px 100vh;
+        }
+        &__container-profile{
+            padding: 0;
+            &__picture{
+                padding: 0;
+            }
+            &__text{
+            margin-left: 1em;
+            }
+        }
+        &__container__content{
+            &__picture{
+                margin: 0;
+            }
+            &__text{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+
 

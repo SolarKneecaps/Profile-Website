@@ -194,11 +194,11 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-bottom: 0.5em;
+  margin: 0em -0.25em 0.5em -0.25em;
 }
 
 .footer__social-container__ln, .footer__social-container__fb, .footer__social-container__gh, .footer__social-container__rs {
-  margin: 0 1em;
+  margin: 0 0.5em;
   -webkit-transition: 150ms color ease-in;
   transition: 150ms color ease-in;
 }

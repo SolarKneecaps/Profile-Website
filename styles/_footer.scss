@@ -8,12 +8,12 @@
     &__social-container{
         @include Flex-Center(row);
         justify-content: space-evenly;
-        margin-bottom: 0.5em;
+        margin: 0em -0.25em 0.5em -0.25em;
         &__ln,
         &__fb,
         &__gh,
         &__rs{
-            margin: 0 1em;
+            margin: 0 0.5em;
             transition: 150ms color ease-in;
             &:hover,
             &:focus{

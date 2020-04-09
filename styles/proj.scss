@@ -107,3 +107,22 @@
 .container-header-less{
     background: $primary-light-grey;
 }
+
+
+@media(max-width: 650px){
+    .cards{
+        &__container{
+            background: $primary-light-grey;
+            &__header{
+                height: 75px;
+                background: $primary-blue;
+                &:hover,
+                &:focus,
+                &:active{
+                    transform: none;
+                }
+            }
+        }
+
+    }
+}
