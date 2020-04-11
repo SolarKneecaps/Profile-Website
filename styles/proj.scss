@@ -11,7 +11,7 @@
     @include Flex-Center(column);
     &__title{
         color: $primary-light-grey;
-        font-size: 3rem;
+        font-size: 3.25rem;
         margin-bottom: 1em;
         text-align: center;
     }
@@ -40,7 +40,7 @@
             width: 100%;
             padding: 0.5em 0.25em 0em 0.25em;
             text-align: center;
-            color: white;
+            color: $primary-white;
             transition: 250ms height 100ms ease-in, 100ms transform 0ms ease-in;
             display: flex;
             flex-direction: column;
@@ -54,8 +54,9 @@
                 transform: scale(0.97);
             }
             &__title{
-                font-size: 1.6rem;
+                font-size: 1.7rem;
                 margin-bottom: 0.1em;
+                text-shadow: 0px 0px 15px $primary-black;
             }
             &-ig{
                 background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../imgs/igpix.png');
@@ -84,10 +85,17 @@
             @include Flex(column);
             justify-content: flex-end;
             padding: 0.75em;
+            font-size: 1.2rem;
             &__text{
-                margin-top: auto;
                 text-align: justify;
-
+                &__links{
+                    font-size: 1.3rem;
+                    &:hover,
+                    &:focus{
+                        color: $primary-orange;
+                        text-shadow: 0px 0px 5px $primary-black;
+                    }
+                }
             }
         }
     }
@@ -122,7 +130,11 @@
                     transform: none;
                 }
             }
+            &__content{
+                font-size: 1.05rem;
+            }
         }
+        
 
     }
 }

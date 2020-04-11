@@ -77,6 +77,8 @@ body {
 
 .header__menu-container {
   z-index: 9;
+  -webkit-transform: translateZ(200px);
+          transform: translateZ(200px);
   position: fixed;
   background: #010212;
   width: 0;

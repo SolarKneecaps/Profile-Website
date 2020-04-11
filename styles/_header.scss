@@ -28,6 +28,7 @@
     }
     &__menu-container{
         z-index: 9;
+        transform: translateZ(200px);
         position: fixed;
         background: $primary-dark-blue;
         width: 0;

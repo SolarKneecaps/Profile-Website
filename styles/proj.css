@@ -77,6 +77,8 @@ body {
 
 .header__menu-container {
   z-index: 9;
+  -webkit-transform: translateZ(200px);
+          transform: translateZ(200px);
   position: fixed;
   background: #010212;
   width: 0;
@@ -225,7 +227,7 @@ body {
 
 .main__title {
   color: #c6ccd8;
-  font-size: 3rem;
+  font-size: 3.25rem;
   margin-bottom: 1em;
   text-align: center;
 }
@@ -265,7 +267,7 @@ body {
   width: 100%;
   padding: 0.5em 0.25em 0em 0.25em;
   text-align: center;
-  color: white;
+  color: #dee0e4;
   -webkit-transition: 250ms height 100ms ease-in, 100ms -webkit-transform 0ms ease-in;
   transition: 250ms height 100ms ease-in, 100ms -webkit-transform 0ms ease-in;
   transition: 250ms height 100ms ease-in, 100ms transform 0ms ease-in;
@@ -292,8 +294,9 @@ body {
 }
 
 .cards__container__header__title {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin-bottom: 0.1em;
+  text-shadow: 0px 0px 15px #202022;
 }
 
 .cards__container__header-ig {
@@ -310,9 +313,9 @@ body {
   background-repeat: no-repeat;
 }
 
-.cards__container__header-cd {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../imgs/cardpix.png");
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../imgs/cardpix.png");
+.cards__container__header-sw {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../imgs/sandpix.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../imgs/sandpix.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -337,11 +340,20 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 0.75em;
+  font-size: 1.2rem;
 }
 
 .cards__container__content__text {
-  margin-top: auto;
   text-align: justify;
+}
+
+.cards__container__content__text__links {
+  font-size: 1.3rem;
+}
+
+.cards__container__content__text__links:hover, .cards__container__content__text__links:focus {
+  color: #FF6600;
+  text-shadow: 0px 0px 5px #202022;
 }
 
 .header-less {
@@ -369,6 +381,9 @@ body {
   .cards__container__header:hover, .cards__container__header:focus, .cards__container__header:active {
     -webkit-transform: none;
             transform: none;
+  }
+  .cards__container__content {
+    font-size: 1.05rem;
   }
 }
 /*# sourceMappingURL=proj.css.map */
