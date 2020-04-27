@@ -310,6 +310,7 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../imgs/weapix.png");
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../imgs/weapix.png");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
